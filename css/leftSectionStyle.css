@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+/* Medidas del divisor izquierdo */
+.divisorIzq
+{
+    min-width: 60%;
+    margin-right: .5rem;
+}
+
+/* TODO --------------------------   Organización de los elementos de la izquierda -----------------------------------*/
+
+/* 1: Organización del header y sus elementos */
+.divisorIzq header
+{
+    display: block;
+    width: 100%;
+    max-height: 4rem;
+    padding: .5rem;
+}
+
+.divisorIzq header img
+{
+    width: 120px;
+    height: 48px;
+}
+
+/* 2: Organización del formulario en general*/
+
+.divisorIzq .formularioTexto
+{
+    width: 80%;
+    margin-left: auto;
+    padding: .5rem .5rem;
+}
+
+/* 2.1: Organización del textArea en el formulario*/
+.divisorIzq .formularioTexto .textoEncriptar_Desencriptar
+{
+    width: 100%;
+    height: 400px;
+    resize: none;
+    padding: 1rem 1rem;
+    font-size: 2rem;
+    color:#0A3871;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    text-transform: lowercase;
+}
+/* 2.1.1: Organización del placeholder en el textArea del formulario*/
+.divisorIzq .formularioTexto .textoEncriptar_Desencriptar::placeholder
+{
+    color:#0A3871;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
+    font-family: "Inter", sans-serif;
+}
+
+/*2.1.2: Colocar el foco del textArea en transparente*/
+
+
+/* 2.2: Organización del aviso de solo minusculas*/
+.divisorIzq .formularioTexto .aviso
+{
+    margin-top: .7rem;
+    color: #495057;
+    font-size: .9rem;
+}
+
+/* 2.2.1: Organización del unicode*/
+.divisorIzq .formularioTexto .aviso::before
+{
+    content: "🛈";
+    color: black;
+}
+
+/* 2.3: Medidas del div de los botones*/
+.divisorIzq .formularioTexto .peticion__areaBotones
+{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+/* 2.3.1: Medidas del botón Encriptar*/
+.btnEncriptar
+{
+    background-color: #0A3871;
+    color: #FFFFFF;
+}
+/* 2.3.1: Medidas del botón Desencriptar*/
+.btnDesencriptar
+{
+    background-color: transparent;
+    color: #0A3871;
+}
+
+/* -------------------------------------------- DISEÑO RESPONSIVE PARA TABLETS ----------------------------------------------*/
+
+@media screen and (max-width: 768px)
+{
+    /* 1: Organización del formulario en general*/
+    .divisorIzq .formularioTexto
+    {
+        width: 100%;
+        margin-left: 0;
+        padding: .5rem .5rem;
+        transition: all .3s ease;
+    }
+
+    /* 2.1: Organización del textArea en el formulario*/
+    .divisorIzq .formularioTexto .textoEncriptar_Desencriptar
+    {
+        font-size: 1.5rem;
+    }
+
+    /* 2.1.1: Organización del placeholder en el textArea del formulario*/
+    .divisorIzq .formularioTexto .textoEncriptar_Desencriptar::placeholder
+    {
+        font-size: 1.5rem;
+    }
+
+}
+
+/* -------------------------------------------- DISEÑO RESPONSIVE PARA CELULARES ----------------------------------------------*/
+
+@media screen and (max-width: 375px)
+{
+    .divisorIzq .formularioTexto .peticion__areaBotones
+    {
+        flex-direction: column;
+    }
+
+    .btnEncriptar
+    {
+        margin-bottom: .5rem;
+    }
+
+    .btndesencriptar
+    {
+        margin-bottom: .5rem;
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/generalStyle.css">
+    <link rel="stylesheet" href="css/leftSectionStyle.css">
+    <link rel="stylesheet" href="css/rightSectionStyle.css">
+    <title>Encriptador de texto</title>
+</head>
+<body>
+    <main>
+        <!-- TODO : Sección apartada para agregar las etiquetas para encriptar y desencriptar -->
+        <section class="divisorIzq">
+            <!-- Header donde va el logo del programa-->
+            <header>
+                <img class="medidasLogo" src="img/Logo.png">
+            </header>
+            <section class="formularioTexto">
+                <!-- Area donde se escribe el texto a encriptar o desencriptar -->
+                <textarea class="textoEncriptar_Desencriptar" id="txaTexto" placeholder="Ingrese su texto aquí..."></textarea>
+                <!--Texto para informar de las condiciones de ingreso del texto-->
+                <p class="aviso"> Solo letras minusculas y sin acento</p>
+                <!-- Dotones de encriptado y desencriptado -->
+                <div class="peticion__areaBotones">
+                    <button class=" medidasBoton btnEncriptar" id="btnEncriptar">Encriptar</button>
+                    <button class="medidasBoton btnDesencriptar" id="btnDesencriptar">Desencriptar</button>
+                </div>
+            </section>
+        </section>
+        <!-- TODO : Sección apartada para mostrar y copiar el texto encriptado o desencriptado (Solo aparece cuando hay texto)-->
+        <section class="divisorDer">
+        <!-- Articulo que se muestra cuando no hay texto)-->
+            <article class="articuloSinRespuesta" id="articuloSinRespuesta">
+                <!-- Div donde se instala la imagen en el area de muestra de respuesta -->
+                <div class="marco_muneco" id="marco_muneco">
+                    <img class="medidasMuneco" src="img/muneco.png">
+                </div>
+                <h3 class="tituloSinRespuesta">Ningún mensaje fue encontrado</h3>
+                <p class="descripcion">Ingresa el texto que deseas encriptar o desencriptar</p>
+            </article>
+        <!-- Articulo donde se muestra el texto ya encriptado o desencriptado -->
+            <article class="artRespuesta" id="artRespuesta">
+                <textarea class="artRespuesta__textoEncriptado_textoDesencriptado" id="txaRespuesta" readonly></textarea>
+                <!-- Div que obtiene el botón donde se puede copiar el texto -->
+                <div class="marcoBotonCopiar">
+                    <button class="medidasBoton btnCopiar" id="btnCopiar">Copiar</button>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p> &copy; Cristian Cordoba | 2024</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

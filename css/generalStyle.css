@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+/* TODO ----------------------- PASO 1: Estilizar el color de la pagina y la tipografía  ---------------------*/
+
+body
+{
+    background-color: #DBF8FC;
+    font-family: "Inter", sans-serif;
+    transition: .3s all ease;
+}
+
+/*TODO -------------------------------- PASO 2: Dejar las secciones una al lado de la otra -----------------------------------------*/
+main
+{
+    display: flex;
+    justify-content: space-around;
+    padding: .7rem 1rem;
+}
+
+/* TODO ----------------------- PASO 3: Ajustar las medidas generales de los botones  ---------------------*/
+.medidasBoton
+{
+    width: 48%;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 1rem;
+    border: 1px solid #0A3871;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.medidasBoton:hover
+{
+    box-shadow: 1px 1px 1px 1px #0A3871;
+}
+
+
+/* TODO ----------------------- PASO 4: Organización del footer  ---------------------*/
+
+footer
+{
+    text-align: center;
+    margin-top: 5rem;
+    padding: 1rem 1rem;
+    color:#0A3871;
+}
+
+footer h3
+{
+    font-size: 1.5rem;
+    display: inline-block;
+    background-color: #0A3871;
+    color: #FFFFFF;
+    padding: .2rem .5rem;
+    font-weight: bold;
+    border: 2px solid #0A3871;
+    border-radius: 1rem;
+}
+
+footer p
+{
+    font-weight: bold;
+}
+
+/* -------------------------------------------- DISEÑO RESPONSIVE PARA TABLETS ----------------------------------------------*/
+
+@media screen and (max-width: 768px)
+{
+
+    /*TODO -------- PASO 1 responsivo tablet: Dejar las secciones una debajo de la otra ------------------------*/
+    main
+    {
+        flex-direction: column;
+    }
+
+}
+
+/* -------------------------------------------- DISEÑO RESPONSIVE PARA CELULARES ----------------------------------------------*/
+
+@media screen and (max-width: 375px)
+{
+    .medidasBoton
+    {
+        width: 100%;
+    }
+}

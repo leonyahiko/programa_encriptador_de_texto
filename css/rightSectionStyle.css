@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+/* Medidas del divisor derecho*/
+.divisorDer
+{
+    width: 25%;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border-radius: 40px;
+    border: .5px solid #FFFFFF;
+    box-shadow: 3px 3px 10px 0px rgba(171, 178, 185, .2);
+    padding: 3rem 2rem;
+    font-family: "Inter", sans-serif;
+}
+
+/* TODO --------------------------   Organización de los elementos de la derecha -----------------------------------*/
+
+/*1. Organización del articulo que muestra el contenido cuando se obtiene información de respuesta */
+
+.divisorDer .artRespuesta
+{
+    /**/display: none;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1rem;
+}
+
+/*1.1: textArea con la información encriptada o desencriptada*/
+.divisorDer .artRespuesta .artRespuesta__textoEncriptado_textoDesencriptado
+{
+    width: 100%;
+    height: 85%;
+    resize: none;
+    border: 0px;
+    color: #0A3871;
+    font-size: 1.2rem;
+    padding: .5rem .5rem;
+    outline: none;
+    text-transform: lowercase;
+}
+/*1.2: Marco que contiene el botón para copiar el texto*/
+.divisorDer .marcoBotonCopiar
+{
+    width: 100%;
+    text-align: center;
+    padding: .5rem .5rem;
+}
+
+/*1.2.1: Medidas especificas del botón copiar*/
+.divisorDer .marcoBotonCopiar .btnCopiar
+{
+    width: 100%;
+    background-color: #FFFFFF;
+    color: #0A3871;
+}
+
+/*2. Organización del articulo que muestra el contenido cuando NO se obtiene información de respuesta */
+
+.divisorDer .articuloSinRespuesta
+{
+    /*display: none;*/
+    font-family: "Inter", sans-serif;
+    text-align: center;
+}
+
+/*2.1: Organización del marco que contiene la imagen o el muñeco*/
+.divisorDer .articuloSinRespuesta .marco_muneco
+{
+    width:"200px";
+    height:"200px";
+    margin-top: 7rem;
+}
+
+/*2.1.1: Medidas de la imagen o el muñeco*/
+.divisorDer .marco_muneco .medidasMuneco
+{
+    width: 100%;
+    height: 100%;
+}
+
+/*2.2: Organización del parrafo y del subtitulo*/
+
+.articuloSinRespuesta .tituloSinRespuesta
+{
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* -------------------------------------------- DISEÑO RESPONSIVE PARA TABLETS ----------------------------------------------*/
+
+@media screen and (max-width: 768px)
+{
+    .divisorDer
+    {
+        width: 100%;
+        min-height: 4rem;
+    }
+    /*1: Organización del marco que contiene la imagen o el muñeco*/
+    .divisorDer .articuloSinRespuesta .marco_muneco
+    {
+        display: none;
+    }
+    /*2: textArea con la información encriptada o desencriptada*/
+    .divisorDer .artRespuesta .artRespuesta__textoEncriptado_textoDesencriptado
+    {
+        min-height: 10rem;
+    }
+}
