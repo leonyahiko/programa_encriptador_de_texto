@@ -127,7 +127,7 @@
 
 /* -------------------------------------------- DISEÑO RESPONSIVE PARA CELULARES ----------------------------------------------*/
 
-@media screen and (max-width: 375px)
+@media screen and (max-width: 450px)
 {
     .divisorIzq .formularioTexto .peticion__areaBotones
     {
