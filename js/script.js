@@ -36,7 +36,7 @@ txaTexto.onkeydown = function check(e) {
     }
 
     // Patrón de entrada, en este caso solo acepta numeros y letras
-    patron = /[A-Z0-9]/;
+    patron = /[a-zA-Z0-9]/;
     tecla_final = String.fromCharCode(tecla);
     return patron.test(tecla_final);
 }
@@ -76,9 +76,10 @@ btnDesencriptar.addEventListener('click', (e) =>
     let texto = txaTexto.value;
     if(mostrarArea(texto)==true)
     {
-        textodesencriptado = texto.replace(/enter/igm,"e");
-        textodesencriptado = textodesencriptado.replace(/imes/igm,"i");
+        textodesencriptado = texto;
         textodesencriptado = textodesencriptado.replace(/ai/igm,"a");
+        textodesencriptado = textodesencriptado.replace(/imes/igm,"i");
+        textodesencriptado = textodesencriptado.replace(/enter/igm,"e");
         textodesencriptado = textodesencriptado.replace(/ober/igm,"o");
         textodesencriptado = textodesencriptado.replace(/ufat/igm,"u");
         txaRespuesta.value = "";
@@ -90,7 +91,7 @@ btnDesencriptar.addEventListener('click', (e) =>
 //evento para el botón copiar
 btnCopiar.addEventListener('click', (e) =>
 {
+    txaRespuesta.value = txaRespuesta.value.toLowerCase();
     txaRespuesta.select();
     document.execCommand('copy');
 });
-
